@@ -136,13 +136,13 @@ function update (){
         return;
     }
 
-    if (pointer.worldX > 400)
+    if (pointer.worldX < 400)
     {
         player.setVelocityX(-160);
 
         player.anims.play('left', true);
     }
-    else if (pointer.worldX < 400)
+    else if (pointer.worldX > 400)
     {
         player.setVelocityX(160);
 
