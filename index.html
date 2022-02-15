@@ -129,11 +129,9 @@ function create ()
 
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
-
+var pointer = this.input.activePointer;
 function update ()
 {
-    var pointer = this.input.activePointer;
-    
     if (gameOver)
     {
         return;
@@ -158,7 +156,7 @@ function update ()
         player.anims.play('turn');
     }
 
-    if (pointer.leftButtonReleased() && player.body.touching.down)
+    if (pointer.isDown && player.body.touching.down)
     {
         player.setVelocityY(-330);
     }
