@@ -129,9 +129,8 @@ function create ()
 
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
-var pointer;
 function update (){
-   pointer = this.input.activePointer; 
+ var pointer = this.input.activePointer; 
     if (gameOver)
     {
         return;
