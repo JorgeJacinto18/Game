@@ -98,7 +98,7 @@ function create ()
     });
 
     //  Input Events
-    cursors = this.input.keyboard.createCursorKeys();
+    cursors = this.input.on('pointerdown', function (pointer);
 
     //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
     stars = this.physics.add.group({
@@ -143,7 +143,7 @@ function update ()
 
         player.anims.play('left', true);
     }
-    else if (onclick)
+    else if (cursors.right.isDown)
     {
         player.setVelocityX(160);
 
